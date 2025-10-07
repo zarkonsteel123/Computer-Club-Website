@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birla Vidya Mandir - Computer & Robotics Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+       
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Birla Vidya Mandir</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#teachers" id="teachersLink">Teachers</a></li>
+                    <li><a href="#" id="adminLink">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Birla Vidya Mandir Computer & Robotics Club</h1>
+            <p>Showcasing innovative projects in robotics and computer science by our talented students</p>
+            <a href="#students" class="btn">View Students</a>
+        </div>
+    </section>
+
+    <!-- About School Section -->
+    <section id="about" class="about-school">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Birla Vidya Mandir</h2>
+                <p>A premier educational institution with a rich legacy of academic excellence and innovation</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Birla Vidya Mandir">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Our Legacy</h3>
+                    <p>Established in 1947, Birla Vidya Mandir is a premier residential school for boys in Nainital, Uttarakhand. Nestled in the serene foothills of the Himalayas, our school provides an ideal environment for holistic education and personal growth.</p>
+                    <p>With a strong emphasis on academic excellence, character building, and innovation, Birla Vidya Mandir has been nurturing young minds for over seven decades. Our Computer & Robotics Club is a testament to our commitment to providing cutting-edge technological education to our students.</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Nainital, Uttarakhand</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <h4>Established</h4>
+                                <p>1947</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>Students</h4>
+                                <p>800+</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Affiliation</h4>
+                                <p>CBSE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Students Section -->
+    <section id="students" class="students">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Talented Students</h2>
+                <p>Meet the brilliant minds behind our innovative projects</p>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="studentSearch" class="search-box" placeholder="Search for a student by name...">
+            </div>
+            
+            <div class="students-grid" id="studentsGrid">
+                <!-- Students will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="teachers" class="teachers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Dedicated Teachers</h2>
+                <p>Meet the mentors guiding our talented students</p>
+            </div>
+            
+            <div class="teachers-grid" id="teachersGrid">
+                <!-- Teachers will be added here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admin Panel</h2>
+                <p>Add teachers and manage student profiles</p>
+            </div>
+            
+            <div class="admin-tabs">
+                <div class="admin-tab active" data-tab="add-teacher">Add Teacher</div>
+                <div class="admin-tab" data-tab="add-student">Add Student</div>
+                <div class="admin-tab" data-tab="manage-teachers">Manage Teachers</div>
+                <div class="admin-tab" data-tab="manage-students">Manage Students</div>
+                <div class="admin-tab" data-tab="add-project">Add Project</div>
+            </div>
+            
+            <!-- Add Teacher Form -->
+            <div id="add-teacher" class="admin-content active">
+                <div class="admin-form">
+                    <div id="teacher-notification" class="notification"></div>
+                    
+                    <form id="teacherForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="teacherFirstName">First Name</label>
+                                <input type="text" id="teacherFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="teacherLastName">Last Name</label>
+                                <input type="text" id="teacherLastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="teacherEmail">Email Address</label>
+                                <input type="email" id="teacherEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="teacherPhone">Phone Number</label>
+                                <input type="tel" id="teacherPhone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="teacherSubject">Subject/Department</label>
+                            <input type="text" id="teacherSubject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="teacherQualification">Qualification</label>
+                            <input type="text" id="teacherQualification" name="qualification" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="teacherBio">Biography</label>
+                            <textarea id="teacherBio" name="bio" placeholder="Provide a brief biography..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="teacherPhoto">Photograph</label>
+                            <input type="file" id="teacherPhoto" name="photo" accept="image/*">
+                        </div>
+                        
+                        <button type="submit" class="btn">Add Teacher</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Add Student Form -->
+            <div id="add-student" class="admin-content">
+                <div class="admin-form">
+                    <div id="student-notification" class="notification"></div>
+                    
+                    <form id="studentForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="studentFirstName">First Name</label>
+                                <input type="text" id="studentFirstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentLastName">Last Name</label>
+                                <input type="text" id="studentLastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="studentGrade">Grade</label>
+                                <select id="studentGrade" name="grade" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="6">Grade 6</option>
+                                    <option value="7">Grade 7</option>
+                                    <option value="8">Grade 8</option>
+                                    <option value="9">Grade 9</option>
+                                    <option value="10">Grade 10</option>
+                                    <option value="11">Grade 11</option>
+                                    <option value="12">Grade 12</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="studentEmail">Email Address</label>
+                                <input type="email" id="studentEmail" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentProjectTitle">Project Title</label>
+                            <input type="text" id="studentProjectTitle" name="projectTitle" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentProjectType">Project Type</label>
+                            <select id="studentProjectType" name="projectType" required>
+                                <option value="">Select Type</option>
+                                <option value="robotics">Robotics</option>
+                                <option value="computer">Computer Science</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentProjectDesc">Project Description</label>
+                            <textarea id="studentProjectDesc" name="projectDesc" placeholder="Describe the project..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group" id="componentsGroup">
+                            <label for="studentComponents">Components Used</label>
+                            <input type="text" id="studentComponents" name="components" placeholder="e.g., Arduino, Sensors, Motors, etc.">
+                        </div>
+                        
+                        <div class="form-group" id="appGroup" style="display: none;">
+                            <label for="studentAppUsed">App Used</label>
+                            <input type="text" id="studentAppUsed" name="appUsed" placeholder="e.g., React Native, Android Studio, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentCodingLanguage">Coding Language</label>
+                            <input type="text" id="studentCodingLanguage" name="codingLanguage" placeholder="e.g., Python, C++, JavaScript, etc." required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="studentPhoto">Photograph</label>
+                            <input type="file" id="studentPhoto" name="photo" accept="image/*">
+                        </div>
+                        
+                        <button type="submit" class="btn">Add Student</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Manage Teachers -->
+            <div id="manage-teachers" class="admin-content">
+                <div class="admin-form">
+                    <h3>Manage Teachers</h3>
+                    <table class="manage-table">
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>Name</th>
+                                <th>Subject</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="manage-teachers-tbody">
+                            <!-- Teachers will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Manage Students -->
+            <div id="manage-students" class="admin-content">
+                <div class="admin-form">
+                    <h3>Manage Students</h3>
+                    <table class="manage-table">
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>Name</th>
+                                <th>Grade</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="manage-students-tbody">
+                            <!-- Students will be added here dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- Add Project -->
+            <div id="add-project" class="admin-content">
+                <div class="admin-form">
+                    <div id="project-notification" class="notification"></div>
+                    
+                    <form id="projectForm">
+                        <div class="form-group">
+                            <label for="projectStudent">Select Student</label>
+                            <select id="projectStudent" name="studentId" required>
+                                <option value="">Select a student</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectTitle">Project Title</label>
+                            <input type="text" id="projectTitle" name="title" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectType">Project Type</label>
+                            <select id="projectType" name="type" required>
+                                <option value="">Select Type</option>
+                                <option value="robotics">Robotics</option>
+                                <option value="computer">Computer Science</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectDesc">Project Description</label>
+                            <textarea id="projectDesc" name="description" placeholder="Describe the project..." required></textarea>
+                        </div>
+                        
+                        <div class="form-group" id="projectComponentsGroup">
+                            <label for="projectComponents">Components Used</label>
+                            <input type="text" id="projectComponents" name="components" placeholder="e.g., Arduino, Sensors, Motors, etc.">
+                        </div>
+                        
+                        <div class="form-group" id="projectAppGroup" style="display: none;">
+                            <label for="projectAppUsed">App Used</label>
+                            <input type="text" id="projectAppUsed" name="appUsed" placeholder="e.g., React Native, Android Studio, etc.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="projectCodingLanguage">Coding Language</label>
+                            <input type="text" id="projectCodingLanguage" name="codingLanguage" placeholder="e.g., Python, C++, JavaScript, etc." required>
+                        </div>
+                        
+                        <button type="submit" class="btn">Add Project</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Detail Modal -->
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="student-detail-header">
+                <div class="student-detail-image">
+                    <img id="modalStudentImage" src="" alt="Student Photo">
+                </div>
+                <div class="student-detail-info">
+                    <h2 id="modalStudentName"></h2>
+                    <span id="modalStudentGrade" class="student-grade"></span>
+                    <p id="modalStudentBio"></p>
+                </div>
+            </div>
+            
+            <div class="student-projects">
+                <h3>Current Project</h3>
+                <div id="modalCurrentProject" class="project-list">
+                    <!-- Current project will be displayed here -->
+                </div>
+                
+                <h3>Previous Projects</h3>
+                <div id="modalPreviousProjects" class="project-list">
+                    <!-- Previous projects will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="project-modal">
+        <div class="project-modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modalProjectTitle"></h2>
+            <div class="project-details">
+                <p><strong>Type:</strong> <span id="modalProjectType"></span></p>
+                <p><strong>Description:</strong> <span id="modalProjectDesc"></span></p>
+                <p id="modalProjectComponentsRow"><strong>Components Used:</strong> <span id="modalProjectComponents"></span></p>
+                <p id="modalProjectAppRow" style="display: none;"><strong>App Used:</strong> <span id="modalProjectAppUsed"></span></p>
+                <p><strong>Coding Language:</strong> <span id="modalProjectCodingLanguage"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Student Modal -->
+    <div id="editStudentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Student</h2>
+            <form id="editStudentForm">
+                <input type="hidden" id="editStudentId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editStudentFirstName">First Name</label>
+                        <input type="text" id="editStudentFirstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editStudentLastName">Last Name</label>
+                        <input type="text" id="editStudentLastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editStudentGrade">Grade</label>
+                        <select id="editStudentGrade" name="grade" required>
+                            <option value="">Select Grade</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editStudentEmail">Email Address</label>
+                        <input type="email" id="editStudentEmail" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editStudentBio">Biography</label>
+                    <textarea id="editStudentBio" name="bio" placeholder="Provide a brief biography..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Update Student</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Teacher Modal -->
+    <div id="editTeacherModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Teacher</h2>
+            <form id="editTeacherForm">
+                <input type="hidden" id="editTeacherId">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editTeacherFirstName">First Name</label>
+                        <input type="text" id="editTeacherFirstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editTeacherLastName">Last Name</label>
+                        <input type="text" id="editTeacherLastName" name="lastName" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editTeacherEmail">Email Address</label>
+                        <input type="email" id="editTeacherEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="editTeacherPhone">Phone Number</label>
+                        <input type="tel" id="editTeacherPhone" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editTeacherSubject">Subject/Department</label>
+                    <input type="text" id="editTeacherSubject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editTeacherQualification">Qualification</label>
+                    <input type="text" id="editTeacherQualification" name="qualification" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="editTeacherBio">Biography</label>
+                    <textarea id="editTeacherBio" name="bio" placeholder="Provide a brief biography..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Update Teacher</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About BVM</h3>
+                    <p>Birla Vidya Mandir is a premier residential school in Nainital, committed to academic excellence and holistic development.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About School</a></li>
+                        <li><a href="#students">Students</a></li>
+                        <li><a href="#teachers">Teachers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Computer & Robotics Club</h3>
+                    <ul>
+                        <li><a href="#">Club Activities</a></li>
+                        <li><a href="#">Achievements</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>Birla Vidya Mandir</p>
+                    <p>Ayarpatta, Nainital</p>
+                    <p>Uttarakhand, India - 263001</p>
+                    <p>Email: info@bvmnainital.org</p>
+                    <p>Phone: +91-5942-237337</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Birla Vidya Mandir Computer & Robotics Club. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // API base URL
+        const API_URL = 'http://localhost:3000/api';
+        
+        // Initialize data
+        let students = {};
+        let teachers = [];
+        let currentEditingStudent = null;
+        let currentEditingTeacher = null;
+        let isAuthenticated = false;
+        
+        // Load data from API when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            fetchStudents();
+            fetchTeachers();
+        });
+
+        // Fetch students from API
+        function fetchStudents() {
+            fetch(`${API_URL}/students`)
+                .then(response => response.json())
+                .then(data => {
+                    students = data;
+                    renderStudents();
+                    renderManageTables();
+                    populateStudentSelect();
+                })
+                .catch(error => {
+                    console.error('Error fetching students:', error);
+                });
+        }
+
+        // Fetch teachers from API
+        function fetchTeachers() {
+            fetch(`${API_URL}/teachers`)
+                .then(response => response.json())
+                .then(data => {
+                    teachers = data;
+                    renderTeachers();
+                    renderManageTables();
+                    
+                    // Show teachers section if there are teachers
+                    if (teachers.length > 0) {
+                        const teachersSection = document.getElementById('teachers');
+                        teachersSection.style.display = 'block';
+                        teachersSection.classList.add('visible');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching teachers:', error);
+                });
+        }
+
+        // Render all students
+        function renderStudents() {
+            const studentsGrid = document.getElementById('studentsGrid');
+            studentsGrid.innerHTML = '';
+            
+            // Check if there's only one student
+            const studentCount = Object.keys(students).length;
+            if (studentCount === 1) {
+                studentsGrid.classList.add('single-student');
+            } else {
+                studentsGrid.classList.remove('single-student');
+            }
+            
+            for (const id in students) {
+                const student = students[id];
+                const studentCard = document.createElement('div');
+                studentCard.className = 'student-card';
+                studentCard.setAttribute('data-name', student.name);
+                studentCard.setAttribute('data-id', id);
+                
+                studentCard.innerHTML = `
+                    <div class="student-image">
+                        <img src="${student.image}" alt="${student.name}">
+                    </div>
+                    <div class="student-content">
+                        <span class="student-grade">${student.grade}</span>
+                        <h3>${student.name}</h3>
+                        <p>${student.bio.substring(0, 100)}...</p>
+                        <a href="#" class="btn">View Profile</a>
+                    </div>
+                `;
+                
+                studentsGrid.appendChild(studentCard);
+            }
+        }
+
+        // Render all teachers
+        function renderTeachers() {
+            const teachersGrid = document.getElementById('teachersGrid');
+            teachersGrid.innerHTML = '';
+            
+            teachers.forEach((teacher, index) => {
+                const teacherCard = document.createElement('div');
+                teacherCard.className = 'teacher-card';
+                
+                teacherCard.innerHTML = `
+                    <div class="teacher-image">
+                        <img src="${teacher.image}" alt="${teacher.firstName} ${teacher.lastName}">
+                    </div>
+                    <div class="teacher-content">
+                        <h3>${teacher.firstName} ${teacher.lastName}</h3>
+                        <span class="teacher-subject">${teacher.subject}</span>
+                        <p>${teacher.bio ? teacher.bio.substring(0, 100) + '...' : 'Click to view profile.'}</p>
+                    </div>
+                `;
+                
+                teachersGrid.appendChild(teacherCard);
+            });
+        }
+
+        // Render manage tables
+        function renderManageTables() {
+            // Render teachers table
+            const teachersTableBody = document.getElementById('manage-teachers-tbody');
+            teachersTableBody.innerHTML = '';
+            
+            teachers.forEach((teacher, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${teacher.image}" alt="${teacher.firstName} ${teacher.lastName}"></td>
+                    <td>${teacher.firstName} ${teacher.lastName}</td>
+                    <td>${teacher.subject}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-info edit-teacher" data-index="${index}">Edit</button>
+                            <button class="btn btn-danger delete-teacher" data-index="${index}">Delete</button>
+                        </div>
+                    </td>
+                `;
+                teachersTableBody.appendChild(row);
+            });
+            
+            // Render students table
+            const studentsTableBody = document.getElementById('manage-students-tbody');
+            studentsTableBody.innerHTML = '';
+            
+            for (const id in students) {
+                const student = students[id];
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${student.image}" alt="${student.name}"></td>
+                    <td>${student.name}</td>
+                    <td>${student.grade}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-info edit-student" data-id="${id}">Edit</button>
+                            <button class="btn btn-danger delete-student" data-id="${id}">Delete</button>
+                        </div>
+                    </td>
+                `;
+                studentsTableBody.appendChild(row);
+            }
+        }
+
+        // Populate student select dropdown
+        function populateStudentSelect() {
+            const select = document.getElementById('projectStudent');
+            select.innerHTML = '<option value="">Select a student</option>';
+            
+            for (const id in students) {
+                const option = document.createElement('option');
+                option.value = id;
+                option.textContent = students[id].name;
+                select.appendChild(option);
+            }
+        }
+
+        // Admin Tab Switching
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs and contents
+                document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.admin-content').forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Student card click event
+        document.getElementById('studentsGrid').addEventListener('click', function(e) {
+            const card = e.target.closest('.student-card');
+            if (card) {
+                const studentId = card.getAttribute('data-id');
+                const student = students[studentId];
+                
+                if (student) {
+                    // Populate modal with student data
+                    document.getElementById('modalStudentImage').src = student.image;
+                    document.getElementById('modalStudentName').textContent = student.name;
+                    document.getElementById('modalStudentGrade').textContent = student.grade;
+                    document.getElementById('modalStudentBio').textContent = student.bio;
+                    
+                    // Clear and populate current project
+                    const currentProjectContainer = document.getElementById('modalCurrentProject');
+                    currentProjectContainer.innerHTML = '';
+                    
+                    if (student.currentProject) {
+                        const projectElement = document.createElement('div');
+                        projectElement.className = 'project-item';
+                        
+                        let projectDetailsHTML = '';
+                        if (student.currentProject.components) {
+                            projectDetailsHTML += `<p><strong>Components:</strong> ${student.currentProject.components}</p>`;
+                        }
+                        if (student.currentProject.appUsed) {
+                            projectDetailsHTML += `<p><strong>App Used:</strong> ${student.currentProject.appUsed}</p>`;
+                        }
+                        projectDetailsHTML += `<p><strong>Coding Language:</strong> ${student.currentProject.codingLanguage}</p>`;
+                        
+                        projectElement.innerHTML = `
+                            <h4>${student.currentProject.title}</h4>
+                            <span class="project-type">${student.currentProject.type}</span>
+                            <p>${student.currentProject.description}</p>
+                            <div class="project-details">
+                                ${projectDetailsHTML}
+                                <button class="btn btn-info more-info-project" data-project="current">More Info</button>
+                            </div>
+                        `;
+                        currentProjectContainer.appendChild(projectElement);
+                    }
+                    
+                    // Clear and populate previous projects
+                    const previousProjectsContainer = document.getElementById('modalPreviousProjects');
+                    previousProjectsContainer.innerHTML = '';
+                    
+                    if (student.previousProjects && student.previousProjects.length > 0) {
+                        student.previousProjects.forEach((project, index) => {
+                            const projectElement = document.createElement('div');
+                            projectElement.className = 'project-item';
+                            
+                            let projectDetailsHTML = '';
+                            if (project.components) {
+                                projectDetailsHTML += `<p><strong>Components:</strong> ${project.components}</p>`;
+                            }
+                            if (project.appUsed) {
+                                projectDetailsHTML += `<p><strong>App Used:</strong> ${project.appUsed}</p>`;
+                            }
+                            projectDetailsHTML += `<p><strong>Coding Language:</strong> ${project.codingLanguage}</p>`;
+                            
+                            projectElement.innerHTML = `
+                                <h4>${project.title}</h4>
+                                <span class="project-type">${project.type}</span>
+                                <p>${project.description}</p>
+                                <div class="project-details">
+                                    ${projectDetailsHTML}
+                                    <button class="btn btn-info more-info-project" data-project="previous" data-index="${index}">More Info</button>
+                                </div>
+                            `;
+                            previousProjectsContainer.appendChild(projectElement);
+                        });
+                    } else {
+                        previousProjectsContainer.innerHTML = '<p>No previous projects.</p>';
+                    }
+                    
+                    // Show modal
+                    document.getElementById('studentModal').style.display = 'block';
+                }
+            }
+        });
+
+        // More info project button click event
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('more-info-project')) {
+                const projectType = e.target.getAttribute('data-project');
+                const studentId = document.querySelector('#studentModal').style.display === 'block' ? 
+                    document.querySelector('.student-card[data-id]').getAttribute('data-id') : null;
+                
+                if (studentId) {
+                    const student = students[studentId];
+                    let project;
+                    
+                    if (projectType === 'current') {
+                        project = student.currentProject;
+                    } else {
+                        const index = parseInt(e.target.getAttribute('data-index'));
+                        project = student.previousProjects[index];
+                    }
+                    
+                    if (project) {
+                        // Populate project modal
+                        document.getElementById('modalProjectTitle').textContent = project.title;
+                        document.getElementById('modalProjectType').textContent = project.type;
+                        document.getElementById('modalProjectDesc').textContent = project.description;
+                        document.getElementById('modalProjectCodingLanguage').textContent = project.codingLanguage;
+                        
+                        // Show/hide components or app based on project type
+                        if (project.components) {
+                            document.getElementById('modalProjectComponents').textContent = project.components;
+                            document.getElementById('modalProjectComponentsRow').style.display = 'block';
+                        } else {
+                            document.getElementById('modalProjectComponentsRow').style.display = 'none';
+                        }
+                        
+                        if (project.appUsed) {
+                            document.getElementById('modalProjectAppUsed').textContent = project.appUsed;
+                            document.getElementById('modalProjectAppRow').style.display = 'block';
+                        } else {
+                            document.getElementById('modalProjectAppRow').style.display = 'none';
+                        }
+                        
+                        // Show project modal
+                        document.getElementById('projectModal').style.display = 'block';
+                    }
+                }
+            }
+        });
+
+        // Close modal
+        document.querySelectorAll('.close-modal').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+                this.closest('.project-modal').style.display = 'none';
+            });
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modals = document.querySelectorAll('.modal, .project-modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        // Admin login
+        document.getElementById('adminLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Prompt for password
+            const password = prompt('Please enter the admin password:');
+            
+            if (password !== null) { // If user didn't cancel
+                console.log('Attempting login with password:', password);
+                
+                // Authenticate with server
+                fetch(`${API_URL}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ password })
+                })
+                .then(response => {
+                    console.log('Login response status:', response.status);
+                    if (!response.ok) {
+                        throw new Error('Authentication failed');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Login response data:', data);
+                    if (data.success) {
+                        isAuthenticated = true;
+                        
+                        // Show admin section
+                        const adminSection = document.getElementById('admin');
+                        adminSection.style.display = 'block';
+                        adminSection.classList.add('visible');
+                        
+                        // Scroll to admin section
+                        adminSection.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        alert('Authentication failed. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during authentication:', error);
+                    alert('Invalid password. Please try again.');
+                });
+            }
+        });
+
+        // Teacher Form Submission
+        document.getElementById('teacherForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements
+            const notification = document.getElementById('teacher-notification');
+            const form = e.target;
+            
+            // Simple form validation
+            if (!form.checkValidity()) {
+                notification.className = 'notification error';
+                notification.textContent = 'Please fill in all required fields.';
+                notification.style.display = 'block';
+                return;
+            }
+            
+            // Create FormData object to handle file upload
+            const formData = new FormData(form);
+            
+            // Send data to API
+            fetch(`${API_URL}/teachers`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    notification.className = 'notification success';
+                    notification.textContent = 'Teacher profile has been added successfully!';
+                    notification.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Refresh teachers list
+                    fetchTeachers();
+                    
+                    // Scroll to teachers section
+                    document.getElementById('teachers').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    notification.className = 'notification error';
+                    notification.textContent = 'Error adding teacher. Please try again.';
+                    notification.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error adding teacher:', error);
+                notification.className = 'notification error';
+                notification.textContent = 'An error occurred. Please try again.';
+                notification.style.display = 'block';
+            });
+        });
+
+        // Student Form Submission
+        document.getElementById('studentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements
+            const notification = document.getElementById('student-notification');
+            const form = e.target;
+            
+            // Simple form validation
+            if (!form.checkValidity()) {
+                notification.className = 'notification error';
+                notification.textContent = 'Please fill in all required fields.';
+                notification.style.display = 'block';
+                return;
+            }
+            
+            // Create FormData object to handle file upload
+            const formData = new FormData(form);
+            
+            // Send data to API
+            fetch(`${API_URL}/students`, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    notification.className = 'notification success';
+                    notification.textContent = 'Student profile has been added successfully!';
+                    notification.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Refresh students list
+                    fetchStudents();
+                    
+                    // Scroll to students section
+                    document.getElementById('students').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    notification.className = 'notification error';
+                    notification.textContent = 'Error adding student. Please try again.';
+                    notification.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error adding student:', error);
+                notification.className = 'notification error';
+                notification.textContent = 'An error occurred. Please try again.';
+                notification.style.display = 'block';
+            });
+        });
+
+        // Project Form Submission
+        document.getElementById('projectForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements
+            const notification = document.getElementById('project-notification');
+            const form = e.target;
+            
+            // Simple form validation
+            if (!form.checkValidity()) {
+                notification.className = 'notification error';
+                notification.textContent = 'Please fill in all required fields.';
+                notification.style.display = 'block';
+                return;
+            }
+            
+            // Get form data
+            const studentId = document.getElementById('projectStudent').value;
+            const projectData = {
+                studentId,
+                title: document.getElementById('projectTitle').value,
+                type: document.getElementById('projectType').value,
+                description: document.getElementById('projectDesc').value,
+                codingLanguage: document.getElementById('projectCodingLanguage').value
+            };
+            
+            // Add components or app based on project type
+            if (projectData.type === 'robotics' || projectData.type === 'both') {
+                projectData.components = document.getElementById('projectComponents').value;
+            }
+            if (projectData.type === 'computer' || projectData.type === 'both') {
+                projectData.appUsed = document.getElementById('projectAppUsed').value;
+            }
+            
+            // Send data to API
+            fetch(`${API_URL}/projects`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(projectData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    notification.className = 'notification success';
+                    notification.textContent = 'Project has been added successfully!';
+                    notification.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Refresh students list
+                    fetchStudents();
+                    
+                    // Scroll to students section
+                    document.getElementById('students').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    notification.className = 'notification error';
+                    notification.textContent = 'Error adding project. Please try again.';
+                    notification.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                console.error('Error adding project:', error);
+                notification.className = 'notification error';
+                notification.textContent = 'An error occurred. Please try again.';
+                notification.style.display = 'block';
+            });
+        });
+
+        // Edit Student button click event
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('edit-student')) {
+                const studentId = e.target.getAttribute('data-id');
+                const student = students[studentId];
+                
+                if (student) {
+                    // Set current editing student
+                    currentEditingStudent = studentId;
+                    
+                    // Populate edit form
+                    const names = student.name.split(' ');
+                    document.getElementById('editStudentId').value = studentId;
+                    document.getElementById('editStudentFirstName').value = names[0] || '';
+                    document.getElementById('editStudentLastName').value = names[1] || '';
+                    document.getElementById('editStudentGrade').value = student.grade.replace('Grade ', '');
+                    document.getElementById('editStudentEmail').value = student.email || '';
+                    document.getElementById('editStudentBio').value = student.bio;
+                    
+                    // Show edit modal
+                    document.getElementById('editStudentModal').style.display = 'block';
+                }
+            }
+        });
+
+        // Edit Teacher button click event
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('edit-teacher')) {
+                const teacherIndex = parseInt(e.target.getAttribute('data-index'));
+                const teacher = teachers[teacherIndex];
+                
+                if (teacher) {
+                    // Set current editing teacher
+                    currentEditingTeacher = teacherIndex;
+                    
+                    // Populate edit form
+                    document.getElementById('editTeacherId').value = teacherIndex;
+                    document.getElementById('editTeacherFirstName').value = teacher.firstName;
+                    document.getElementById('editTeacherLastName').value = teacher.lastName;
+                    document.getElementById('editTeacherEmail').value = teacher.email;
+                    document.getElementById('editTeacherPhone').value = teacher.phone;
+                    document.getElementById('editTeacherSubject').value = teacher.subject;
+                    document.getElementById('editTeacherQualification').value = teacher.qualification;
+                    document.getElementById('editTeacherBio').value = teacher.bio;
+                    
+                    // Show edit modal
+                    document.getElementById('editTeacherModal').style.display = 'block';
+                }
+            }
+        });
+
+        // Edit Student Form Submission
+        document.getElementById('editStudentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const studentId = document.getElementById('editStudentId').value;
+            const formData = new FormData();
+            
+            formData.append('firstName', document.getElementById('editStudentFirstName').value);
+            formData.append('lastName', document.getElementById('editStudentLastName').value);
+            formData.append('grade', document.getElementById('editStudentGrade').value);
+            formData.append('email', document.getElementById('editStudentEmail').value);
+            formData.append('bio', document.getElementById('editStudentBio').value);
+            
+            // Get photo file if selected
+            const photoFile = document.getElementById('editStudentPhoto');
+            if (photoFile.files.length > 0) {
+                formData.append('photo', photoFile.files[0]);
+            }
+            
+            // Send data to API
+            fetch(`${API_URL}/students/${studentId}`, {
+                method: 'PUT',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Close modal
+                    document.getElementById('editStudentModal').style.display = 'none';
+                    
+                    // Show success message
+                    const notification = document.getElementById('student-notification');
+                    notification.className = 'notification success';
+                    notification.textContent = 'Student profile has been updated successfully!';
+                    notification.style.display = 'block';
+                    
+                    // Refresh students list
+                    fetchStudents();
+                } else {
+                    alert('Error updating student. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error updating student:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+
+        // Edit Teacher Form Submission
+        document.getElementById('editTeacherForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const teacherIndex = document.getElementById('editTeacherId').value;
+            const formData = new FormData();
+            
+            formData.append('firstName', document.getElementById('editTeacherFirstName').value);
+            formData.append('lastName', document.getElementById('editTeacherLastName').value);
+            formData.append('email', document.getElementById('editTeacherEmail').value);
+            formData.append('phone', document.getElementById('editTeacherPhone').value);
+            formData.append('subject', document.getElementById('editTeacherSubject').value);
+            formData.append('qualification', document.getElementById('editTeacherQualification').value);
+            formData.append('bio', document.getElementById('editTeacherBio').value);
+            
+            // Get photo file if selected
+            const photoFile = document.getElementById('editTeacherPhoto');
+            if (photoFile.files.length > 0) {
+                formData.append('photo', photoFile.files[0]);
+            }
+            
+            // Send data to API
+            fetch(`${API_URL}/teachers/${teacherIndex}`, {
+                method: 'PUT',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Close modal
+                    document.getElementById('editTeacherModal').style.display = 'none';
+                    
+                    // Show success message
+                    const notification = document.getElementById('teacher-notification');
+                    notification.className = 'notification success';
+                    notification.textContent = 'Teacher profile has been updated successfully!';
+                    notification.style.display = 'block';
+                    
+                    // Refresh teachers list
+                    fetchTeachers();
+                } else {
+                    alert('Error updating teacher. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error updating teacher:', error);
+                alert('An error occurred. Please try again.');
+            });
+        });
+
+        // Delete Student button click event
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('delete-student')) {
+                const studentId = e.target.getAttribute('data-id');
+                
+                if (confirm('Are you sure you want to delete this student?')) {
+                    // Send delete request to API
+                    fetch(`${API_URL}/students/${studentId}`, {
+                        method: 'DELETE'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Show success message
+                            const notification = document.getElementById('student-notification');
+                            notification.className = 'notification success';
+                            notification.textContent = 'Student has been deleted successfully!';
+                            notification.style.display = 'block';
+                            
+                            // Refresh students list
+                            fetchStudents();
+                        } else {
+                            alert('Error deleting student. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error deleting student:', error);
+                        alert('An error occurred. Please try again.');
+                    });
+                }
+            }
+        });
+
+        // Delete Teacher button click event
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('delete-teacher')) {
+                const teacherIndex = parseInt(e.target.getAttribute('data-index'));
+                
+                if (confirm('Are you sure you want to delete this teacher?')) {
+                    // Send delete request to API
+                    fetch(`${API_URL}/teachers/${teacherIndex}`, {
+                        method: 'DELETE'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Show success message
+                            const notification = document.getElementById('teacher-notification');
+                            notification.className = 'notification success';
+                            notification.textContent = 'Teacher has been deleted successfully!';
+                            notification.style.display = 'block';
+                            
+                            // Refresh teachers list
+                            fetchTeachers();
+                        } else {
+                            alert('Error deleting teacher. Please try again.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error deleting teacher:', error);
+                        alert('An error occurred. Please try again.');
+                    });
+                }
+            }
+        });
+
+        // Project Type Change Handler
+        document.getElementById('studentProjectType').addEventListener('change', function() {
+            const projectType = this.value;
+            const componentsGroup = document.getElementById('componentsGroup');
+            const appGroup = document.getElementById('appGroup');
+            
+            if (projectType === 'robotics') {
+                componentsGroup.style.display = 'block';
+                appGroup.style.display = 'none';
+            } else if (projectType === 'computer') {
+                componentsGroup.style.display = 'none';
+                appGroup.style.display = 'block';
+            } else if (projectType === 'both') {
+                componentsGroup.style.display = 'block';
+                appGroup.style.display = 'block';
+            } else {
+                componentsGroup.style.display = 'none';
+                appGroup.style.display = 'none';
+            }
+        });
+
+        // Project Type Change Handler for Project Form
+        document.getElementById('projectType').addEventListener('change', function() {
+            const projectType = this.value;
+            const componentsGroup = document.getElementById('projectComponentsGroup');
+            const appGroup = document.getElementById('projectAppGroup');
+            
+            if (projectType === 'robotics') {
+                componentsGroup.style.display = 'block';
+                appGroup.style.display = 'none';
+            } else if (projectType === 'computer') {
+                componentsGroup.style.display = 'none';
+                appGroup.style.display = 'block';
+            } else if (projectType === 'both') {
+                componentsGroup.style.display = 'block';
+                appGroup.style.display = 'block';
+            } else {
+                componentsGroup.style.display = 'none';
+                appGroup.style.display = 'none';
+            }
+        });
+
+        // Search functionality
+        document.getElementById('studentSearch').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const studentCards = document.querySelectorAll('.student-card');
+            
+            studentCards.forEach(card => {
+                const studentName = card.getAttribute('data-name').toLowerCase();
+                
+                if (studentName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Navigation functionality
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+
+        // Teachers link functionality
+        document.getElementById('teachersLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const teachersSection = document.getElementById('teachers');
+            teachersSection.style.display = 'block';
+            teachersSection.classList.add('visible');
+            
+            teachersSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

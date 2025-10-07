@@ -1,0 +1,62 @@
+{
+  "1": {
+    "name": "Virat Chauhan",
+    "grade": "Grade 7",
+    "email": "224178@birlaviydamandir.com",
+    "bio": "A talented student in Grade 7.",
+    "image": "/uploads/photo-1759838772905-851978233.JPG",
+    "currentProject": {
+      "title": "Crab Scorer",
+      "type": "computer",
+      "description": "It is a game in which a crab is supposed o touch the Stars and avoid Sun...",
+      "codingLanguage": "Code Blocks",
+      "appUsed": "Scratch 3.0"
+    },
+    "previousProjects": []
+  },
+  "2": {
+    "name": "Chaitanya Sharma",
+    "grade": "Grade 7",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 7.",
+    "image": "/uploads/photo-1759839043467-199744144.JPG",
+    "currentProject": {
+      "title": "Flappy Bird Game",
+      "type": "computer",
+      "description": "A bird is flying and it is supposed to avoid pipes. The person to make the highest score by travelling the longest distance wins...  ",
+      "codingLanguage": "Code Blocks",
+      "appUsed": "Scratch 3.0"
+    },
+    "previousProjects": []
+  },
+  "3": {
+    "name": "Samarveer Singh Chauhan",
+    "grade": "Grade 7",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 7.",
+    "image": "/uploads/photo-1759839474025-432885591.JPG",
+    "currentProject": {
+      "title": "Obstacle avoiding game",
+      "type": "computer",
+      "description": "A game in which you have to avoid trucks and cars...",
+      "codingLanguage": "Code Blocks",
+      "appUsed": "Scratch 3.0"
+    },
+    "previousProjects": []
+  },
+  "4": {
+    "name": "Ansh Tripathi",
+    "grade": "Grade 9",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 9.",
+    "image": "/uploads/photo-1759839727909-615925640.JPG",
+    "currentProject": {
+      "title": "Indian Software Hub",
+      "type": "computer",
+      "description": "It is a website in which all successful Indian IT companies data is present...",
+      "codingLanguage": "HTML, JavaScript, CSS",
+      "appUsed": "VS Code"
+    },
+    "previousProjects": []
+  }
+}

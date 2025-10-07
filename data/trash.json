@@ -1,0 +1,53 @@
+{
+  "students": {
+    "1": {
+      "name": "Rahul Sharma",
+      "grade": "Grade 12",
+      "image": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+      "bio": "Rahul is a passionate student with a keen interest in robotics and artificial intelligence.",
+      "currentProject": {
+        "title": "Autonomous Navigation Robot",
+        "type": "Robotics",
+        "description": "A self-navigating robot that uses sensors and AI to avoid obstacles.",
+        "components": "Arduino, Ultrasonic Sensors, Motors, Battery Pack",
+        "codingLanguage": "C++"
+      },
+      "previousProjects": [],
+      "deletedAt": "2025-10-07T09:29:57.484Z",
+      "type": "student"
+    },
+    "2": {
+      "name": "Priya Singh",
+      "grade": "Grade 11",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+      "bio": "Priya is a talented programmer with expertise in web development and mobile app creation.",
+      "currentProject": {
+        "title": "Weather Forecast App",
+        "type": "Computer Science",
+        "description": "A web application that provides real-time weather information.",
+        "appUsed": "HTML, CSS, JavaScript, Weather API",
+        "codingLanguage": "JavaScript"
+      },
+      "previousProjects": [],
+      "deletedAt": "2025-10-07T09:30:00.547Z",
+      "type": "student"
+    },
+    "3": {
+      "name": "Amit Patel",
+      "grade": "Grade 12",
+      "image": "https://images.unsplash.com/photo-1596495577886-d920f3fb7bfe?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+      "bio": "Amit is an expert in hardware design and electronics.",
+      "currentProject": {
+        "title": "Precision Robotic Arm",
+        "type": "Robotics",
+        "description": "A 4-axis robotic arm capable of precise movements.",
+        "components": "Servo Motors, Arduino, Python, 3D Printed Parts",
+        "codingLanguage": "Python"
+      },
+      "previousProjects": [],
+      "deletedAt": "2025-10-07T09:30:02.954Z",
+      "type": "student"
+    }
+  },
+  "teachers": []
+}
