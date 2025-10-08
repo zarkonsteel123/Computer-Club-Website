@@ -58,5 +58,282 @@
       "appUsed": "VS Code"
     },
     "previousProjects": []
+  },
+  "7": {
+    "name": "Arjun Sachchar",
+    "grade": "Grade 9",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 9.",
+    "image": "/uploads/photo-1759843705631-275367918.JPG",
+    "currentProject": {
+      "title": "Hide & Seek",
+      "type": "computer",
+      "description": "The OG Hide & Seek game in which 1 is the Seeker and others are Hiders.",
+      "codingLanguage": "Lua",
+      "appUsed": "Roblox Studio"
+    },
+    "previousProjects": [
+      {
+        "title": "Mini Games",
+        "type": "computer",
+        "description": "A 3D game hub on Roblox where you play many games...",
+        "codingLanguage": "Lua",
+        "appUsed": "Roblox Studio"
+      },
+      {
+        "title": "Neon Rush Obby",
+        "type": "computer",
+        "description": "**Neon Rush Obby** is a fast-paced and visually stunning Roblox game that challenges players to race through a vibrant world filled with glowing neon colors, tricky parkour jumps, and moving platforms. Set in a futuristic city of lights, the game combines speed, agility, and precision as players navigate through multiple obstacle courses that test their reflexes and timing. Each level becomes more challenging with creative traps, disappearing paths, and glowing lasers that make every run exciting. The upbeat electronic music and colorful atmosphere create an adrenaline-filled experience that keeps players hooked. Whether you’re playing solo or competing with friends, *Neon Rush Obby* offers a thrilling adventure full of energy and style.",
+        "codingLanguage": "Lua",
+        "appUsed": "Roblox Studio"
+      },
+      {
+        "title": "Escape the Ball",
+        "type": "computer",
+        "description": "Escape from 3 Evil Spiky Balls through a Blue Coloured Portal.",
+        "codingLanguage": "Lua",
+        "appUsed": "Roblox Studio"
+      }
+    ]
+  },
+  "8": {
+    "name": "Devansh khandelwal",
+    "grade": "Grade 11",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 11.",
+    "image": "/uploads/photo-1759843935138-997032968.JPG",
+    "currentProject": {
+      "title": "Cyber Space website",
+      "type": "computer",
+      "description": "A website which gives information about many games and their developers...",
+      "codingLanguage": "HTML, CSS, javaScript",
+      "appUsed": "VS Code"
+    },
+    "previousProjects": []
+  },
+  "9": {
+    "name": "Dev Goyal",
+    "grade": "Grade 9",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 9.",
+    "image": "/uploads/photo-1759844388136-893294362.JPG",
+    "currentProject": {
+      "title": "Indigenious Tech Ecosystem Of India",
+      "type": "computer",
+      "description": "It is a website about India’s indigenous technology ecosystem is rapidly emerging as one of the most dynamic and self-reliant in the world. Rooted in the vision of Atmanirbhar Bharat (self-reliant India), it focuses on developing homegrown innovations across sectors like information technology, defense, space research, renewable energy, and biotechnology. Indian startups and research institutions are driving breakthroughs in artificial intelligence, semiconductors, digital payments, and sustainable technologies, reducing dependence on foreign solutions. Organizations such as ISRO, DRDO, and C-DAC, along with private players and startups, are strengthening India’s technological foundation. This growing ecosystem not only supports economic growth but also empowers local talent, promotes innovation, and enhances national security—making India a global hub for indigenous technological advancement.",
+      "codingLanguage": "HTML, CSS, javaScript",
+      "appUsed": "VS Code"
+    },
+    "previousProjects": []
+  },
+  "10": {
+    "name": "Agrim Consul",
+    "grade": "Grade 9",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 9.",
+    "image": "/uploads/photo-1759844496580-374251221.jpg",
+    "currentProject": {
+      "title": "Hide And Seek Game",
+      "type": "computer",
+      "description": "It is a 3D game in which hiders have to hide and seekers have to find the players hiding...",
+      "codingLanguage": "Lua",
+      "appUsed": "Roblox Studio"
+    },
+    "previousProjects": []
+  },
+  "11": {
+    "name": "Diyvansh Kapoor",
+    "grade": "Grade 9",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 9.",
+    "image": "/uploads/photo-1759899154892-728619959.JPG",
+    "currentProject": {
+      "title": "Alcohol detector with smart parking system with automatic solar energy maker.",
+      "type": "robotics",
+      "description": "A parking system which opens when a car comes and alcohol is detected so the door does not open and works using solar panel...",
+      "codingLanguage": "C++",
+      "components": "Arduino Uno, IR sensor, alcohol detector sensor, servo motor, LCD display, Breadboard"
+    },
+    "previousProjects": []
+  },
+  "12": {
+    "name": "Arnav  Singhal",
+    "grade": "Grade 9",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 9.",
+    "image": "/uploads/photo-1759899359971-561933858.JPG",
+    "currentProject": {
+      "title": "Home Automation With Face And Fingerprint detection",
+      "type": "robotics",
+      "description": "A smart home which opens when it detects owners face and fingerprints...",
+      "codingLanguage": "C++, Python",
+      "components": "Arduino Uno, Servo motor, LED's, Motor Driver, Camera, fingerprint scanner"
+    },
+    "previousProjects": []
+  },
+  "13": {
+    "name": "Shashwat Kedia",
+    "grade": "Grade 8",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 8.",
+    "image": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+    "currentProject": {
+      "title": "Humanoid Moving Head",
+      "type": "robotics",
+      "description": "A robot with human face that moves and talks...",
+      "codingLanguage": "C++",
+      "components": "Arduino Nano, Servo Motors"
+    },
+    "previousProjects": []
+  },
+  "14": {
+    "name": "Sarthak Jaiswal",
+    "grade": "Grade 8",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 8.",
+    "image": "/uploads/photo-1759899709392-428537768.JPG",
+    "currentProject": {
+      "title": "Irrigation Car",
+      "type": "robotics",
+      "description": "A car which automatically travels in the field and irrigates the crop...",
+      "codingLanguage": "C++",
+      "components": "Arduino Uno, Water Pump, Motor driver, motors, Water storage unit, Bluetooth module "
+    },
+    "previousProjects": []
+  },
+  "15": {
+    "name": "Udit Jajaodia",
+    "grade": "Grade 6",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 6.",
+    "image": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80",
+    "currentProject": {
+      "title": "Radar Defence System",
+      "type": "robotics",
+      "description": "A mini prototype of radar used by the world...",
+      "codingLanguage": "C++",
+      "components": "Arduino Uno, Ultrasonic sensor, Servo motor"
+    },
+    "previousProjects": []
+  },
+  "16": {
+    "name": "Jai Gupta",
+    "grade": "Grade 8",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 8.",
+    "image": "/uploads/photo-1759900208563-466503809.JPG",
+    "currentProject": {
+      "title": "AI Finance detector Website",
+      "type": "computer",
+      "description": "A website which is easy to use and can help you calculate your budgets with pie and graphs charts..",
+      "codingLanguage": "HTML, CSS, javaScript",
+      "appUsed": "VS Code"
+    },
+    "previousProjects": []
+  },
+  "17": {
+    "name": "Rudransh Pratap Singh",
+    "grade": "Grade 11",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 11.",
+    "image": "/uploads/photo-1759900425535-907519692.JPG",
+    "currentProject": {
+      "title": "Bionic Arm",
+      "type": "robotics",
+      "description": "A humanoid project of a human arm to help the handicaps...",
+      "codingLanguage": "C++, Python",
+      "components": "Arduino Uno, Servo motors, 3D printed Parts"
+    },
+    "previousProjects": []
+  },
+  "18": {
+    "name": "Artham Dwivedi",
+    "grade": "Grade 7",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 7.",
+    "image": "/uploads/photo-1759900599377-186571204.JPG",
+    "currentProject": {
+      "title": "Fruit Cutting Game",
+      "type": "computer",
+      "description": "A 2D game to cut fruits flying in the air and don't let the fruit touch the ground without being cut...",
+      "codingLanguage": "Code Blocks",
+      "appUsed": "Scratch 3.0"
+    },
+    "previousProjects": []
+  },
+  "19": {
+    "name": "Yuvraj Singh Rajput",
+    "grade": "Grade 7",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 7.",
+    "image": "/uploads/photo-1759900743794-80170134.JPG",
+    "currentProject": {
+      "title": "Space Wave Game",
+      "type": "computer",
+      "description": "A game in which we have to escape the obstacle and travel as far as possible to win...",
+      "codingLanguage": "Code Blocks",
+      "appUsed": "Scratch 3.0"
+    },
+    "previousProjects": []
+  },
+  "21": {
+    "name": "Achintya Kumar",
+    "grade": "Grade 7",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 7.",
+    "image": "/uploads/photo-1759901083292-536041462.JPG",
+    "currentProject": {
+      "title": "Packman Game",
+      "type": "computer",
+      "description": "A game in which we have to escape the ghosts and reach the end point of the maze...",
+      "codingLanguage": "Code Blocks",
+      "appUsed": "Scratch 3.0"
+    },
+    "previousProjects": []
+  },
+  "22": {
+    "name": "Shourya Pratap Singh",
+    "grade": "Grade 10",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 10.",
+    "image": "/uploads/photo-1759901272847-67398852.JPG",
+    "currentProject": {
+      "title": "Rebrick Technology Website",
+      "type": "computer",
+      "description": "A website which explains about using waste plastic to make bricks for buildings...",
+      "codingLanguage": "HTML, CSS, javaScript",
+      "appUsed": "VS Code"
+    },
+    "previousProjects": []
+  },
+  "23": {
+    "name": "Piyiush Jaiswal",
+    "grade": "Grade 12",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 12.",
+    "image": "/uploads/photo-1759901490174-393673776.JPG",
+    "currentProject": {
+      "title": "Our School's 3D Blender Model",
+      "type": "computer",
+      "description": "A 3D model of our senior school made on blender...",
+      "codingLanguage": "N\\A",
+      "appUsed": "Blender 3.0"
+    },
+    "previousProjects": []
+  },
+  "24": {
+    "name": "Anshil Bansal",
+    "grade": "Grade 12",
+    "email": "NA@gmail.com",
+    "bio": "A talented student in Grade 12.",
+    "image": "/uploads/photo-1759904664058-252421717.JPG",
+    "currentProject": {
+      "title": "Laser Engraver",
+      "type": "computer",
+      "description": "A machine which burns wood, paper, cardboard, etc. using laser to make prints on it ",
+      "codingLanguage": "N\\A",
+      "appUsed": "Laser GRBL"
+    },
+    "previousProjects": []
   }
 }

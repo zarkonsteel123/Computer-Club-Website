@@ -1,1 +1,12 @@
-[]
+[
+  {
+    "firstName": "Mr.Dheeraj",
+    "lastName": "Bhatt",
+    "email": "dheerajbhatt@birlavidyamandir.com",
+    "phone": "10987654321",
+    "subject": "Computer Sciences",
+    "qualification": "M.C.A.",
+    "bio": "A  talented and learned man with great amounts of knowledge...",
+    "image": "/uploads/photo-1759843763278-9759365.PNG"
+  }
+]
